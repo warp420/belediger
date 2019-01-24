@@ -1,0 +1,18 @@
+<html>
+<head><title>belediger v1.0</title>
+</head>
+<body>
+<?php
+$i = 1 ;
+$ran = mt_rand(1,100) ;
+$FH = fopen("test.txt","r") ;
+while ( !feof($FH) ) {
+    $content = fgets($FH,4096) ;
+    if ( $ran == $i ) {
+        echo $content ;
+    }
+    $i++ ;
+}
+?>
+</body>
+</html>
